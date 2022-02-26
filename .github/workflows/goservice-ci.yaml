@@ -1,12 +1,16 @@
 name: Go Service CI
 
 on:
-  push:
-    branches:
-      - '**'
+  pull_request:
     paths:
       - 'services/goservice/**'
       - '.github/workflows/goservice-ci.yaml'
+#  push:
+#    branches:
+#      - '**'
+#    paths:
+#      - 'services/goservice/**'
+#      - '.github/workflows/goservice-ci.yaml'
 
 jobs:
   lint:
