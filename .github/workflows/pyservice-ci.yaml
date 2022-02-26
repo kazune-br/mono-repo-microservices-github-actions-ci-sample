@@ -1,12 +1,16 @@
 name: Py Service CI
 
 on:
-  push:
-    branches:
-      - '**'
+  pull_request:
     paths:
       - 'services/pyservice/**'
       - '.github/workflows/pyservice-ci.yaml'
+#  push:
+#    branches:
+#      - '**'
+#    paths:
+#      - 'services/pyservice/**'
+#      - '.github/workflows/pyservice-ci.yaml'
 
 jobs:
   lint:
