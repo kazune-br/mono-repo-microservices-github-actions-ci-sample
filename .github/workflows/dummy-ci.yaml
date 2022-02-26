@@ -1,0 +1,21 @@
+name: Dummy CI
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  dummy-lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit with success
+        run: exit 0
+
+  dummy-test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit with success
+        run: exit 0
