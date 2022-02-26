@@ -1,0 +1,30 @@
+name: Rust Service CI
+
+on:
+  pull_request:
+    paths:
+      - 'services/rstservice/**'
+      - '.github/workflows/rstservice-ci.yaml'
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Cargo
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Checkout current commit
+        uses: actions/checkout@v2
+
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Cargo
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Checkout current commit
+        uses: actions/checkout@v2
