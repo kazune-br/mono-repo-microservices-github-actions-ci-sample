@@ -16,6 +16,7 @@ jobs:
   lint:
     name: lint
     runs-on: ubuntu-latest
+    # https://github.com/actions/setup-python
     steps:
       - name: Set up Python 3.10
         uses: actions/setup-python@v2
