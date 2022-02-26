@@ -1,0 +1,38 @@
+name: Py Service CI
+
+on:
+  pull_request:
+    paths:
+      - 'services/pyservice/**'
+      - '.github/workflows/pyservice-ci.yaml'
+#  push:
+#    branches:
+#      - '**'
+#    paths:
+#      - 'services/pyservice/**'
+#      - '.github/workflows/pyservice-ci.yaml'
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+          architecture: x64
+      - name: Checkout current commit
+        uses: actions/checkout@v2
+
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+          architecture: x64
+      - name: Checkout current commit
+        uses: actions/checkout@v2
