@@ -1,4 +1,4 @@
-name: Dummy CI
+name: Go Service CI
 
 on:
   push:
