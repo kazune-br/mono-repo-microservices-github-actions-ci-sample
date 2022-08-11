@@ -26,6 +26,7 @@ jobs:
       - name: experiment
         run: |
           sleep 10
+          exit 1
 
   test:
     name: test
