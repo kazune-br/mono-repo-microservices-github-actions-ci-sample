@@ -25,6 +25,9 @@ jobs:
           architecture: x64
       - name: Checkout current commit
         uses: actions/checkout@v2
+      - name: experiment
+        run: |
+          sleep 20
 
   test:
     name: test
