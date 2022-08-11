@@ -23,6 +23,9 @@ jobs:
           go-version: 1.17
       - name: Checkout current commit
         uses: actions/checkout@v2
+      - name: experiment
+        run: |
+          sleep 10
 
   test:
     name: test
